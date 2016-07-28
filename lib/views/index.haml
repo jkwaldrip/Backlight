@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %title Backlight:  A Test Service for Blacklight
+    %link{:href => "/images/favicon.ico", :rel => "shortcut icon"}
+    %link{:type => "text/css", :rel => "stylesheet", :href => "/css/normalize.css"}
+    %link{:type => "text/css", :rel => "stylesheet", :href => "/css/skeleton.css"}
+
+    %body
+      %div.container
+        %div.row{:style => "margin-top: 20px;"}
+          %div.four.columns.alpha{:style => "border-right: solid 1px black; width: 300px"}
+            %h5{:style => "margin-top: 25px; margin-bottom: 0px"} IUCAT
+            %h1{:style => "margin-top: -15px;"} Backlight
+          %div.five.columns{:style => "max-width: 300px"}
+            %p{:style => "margin-top: 30px"} A service providing back-end testing data for IUCAT Blacklight.
+
+        %div.row{:style => "margin-top: 50px", :id => 'changelog'}
+          %h2{:style => "text-align: left"} Changelog
+          -@changelog.each do |ver,hsh|
+            .changelog.row
+              %h3.version.columns.three.version #{ver}
+              %h5.summary.columns.nine.summary{:style => "margin-bottom: 0; margin-top: 10px"} #{hsh[:summary]}
+              %div.columns.nine.offset-by-three.explanation{:style => ""} #{hsh[:explanation]}

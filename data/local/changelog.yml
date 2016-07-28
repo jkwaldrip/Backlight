@@ -1,0 +1,4 @@
+---
+0.1.0:
+  :summary: Example JSON & XML Responses
+  :explanation: Responds with JSON to GETs on /json?anyparams and with XML to GETs on /xml?anyparams
